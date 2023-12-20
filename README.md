@@ -1,2 +1,2 @@
 # Js-course
-This is for Javascript. 
+This is for Javascript.
