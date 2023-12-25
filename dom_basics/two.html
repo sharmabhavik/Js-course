@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a New Element</title>
+    <style>
+        .first {
+            background-color: blue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .h1 {
+            color: aqua;
+        }
+
+        .parent {
+
+            background-color: black;
+            color: white;
+            display: inline-block;
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+            margin: 20vh;
+            border: 2px solid gray;
+            padding: 20px;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body style="background-color: black;">
+    <nav>
+        <div class="first">
+            <h1>Shopping Website</h1>
+        </div>
+    </nav>
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+        <div class="day">Friday</div>
+    </div>
+</body>
+
+<script>
+    const parent = document.querySelector('.parent');
+    // console.log(parent);
+    // console.log(parent.children);
+    // console.log(parent.children[1].innerText);
+    // console.log(parent.children[1].innerHTML);
+    
+    //using for loop 
+    // for (let i = 0; i < parent.children.length; i++) {
+    //     // console.log(parent.children[i]);
+    //     console.log(parent.children[i].innerHTML);
+    // }
+
+    // parent.children[1].style.color = "green";
+
+    // Moving from parents to child
+    // console.log(parent.firstElementChild);
+    // console.log(parent.lastElementChild);
+
+    // Moving from child to Parents
+    // const dayOne = document.querySelector('.day');
+    // console.log(dayOne.parentElement);
+    // console.log(dayOne);
+    // console.log(dayOne.nextElementSibling);
+
+    //Nodes
+    console.log("NODES: ",parent.childNodes);
+    
+</script>
+
+</html>

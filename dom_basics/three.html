@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating a New Element/div in Script </title>
+</head>
+
+<body style="background-color: black;">
+
+</body>
+
+<script>
+    const div = document.createElement('div');
+    // div.innerText = "I am Javascript";
+    console.log(div);
+    div.className = "main";
+    div.id = Math.round(Math.random() * 10 + 1);
+    div.setAttribute("title", "Generated Title");
+    div.style.backgroundColor = "white"
+    div.style.Color = 'black';
+
+    // How to add content in div and body and display it on webpage
+    const addText = document.createTextNode("C-O-C")
+    div.appendChild(addText);
+    document.body.appendChild(div);
+</script>
+
+</html>

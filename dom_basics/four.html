@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit and Remove HTML Element</title>
+</head>
+
+<body style="background-color: black; color: white;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+
+</body>
+<script>
+    function addname(langname) {
+        const li = document.createElement('li');
+        li.innerHTML = `${langname}`
+        document.querySelector('.language').appendChild(li)
+    }
+
+    addname("java");
+    addname("python");
+    addname("C++");
+
+    function addOpt(langname) {
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langname));
+
+        //                          Or
+
+        // const addtext = document.createTextNode('.langname');
+        // li.appendChild(addText);
+        document.querySelector('.language').appendChild(li);
+    }
+    addOpt('golang');
+
+    const secondlang = document.querySelector("li:nth-child(2)");
+    const newlang = document.createElement('li');
+    newlang.textContent = "chhojo katru jeoung";
+    secondlang.replaceWith(newlang);
+
+    const firstlang = document.querySelector('li:first-child');
+    firstlang.outerHTML = "lalji";
+
+    const lastlang = document.querySelector('li:last-child');
+    lastlang.remove();
+</script>
+
+</html>
